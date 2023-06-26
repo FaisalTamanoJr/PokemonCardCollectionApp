@@ -18,9 +18,10 @@ public class Main {
     private static final String pokemonData = "Pokemon.txt";
 
     public static void main(String[] args) {
-        // TODO:
-        System.out.println("Hello LBYCPEI!");
+        // Load the pokemon database
         String[][] database = loadStats();
+
+        new PokemonCardCollection(database).run();
     }
 
     /*
