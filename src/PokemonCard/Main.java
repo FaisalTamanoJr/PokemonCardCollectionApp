@@ -19,17 +19,17 @@ public class Main {
 
     public static void main(String[] args) {
         // TODO:
-        System.out.println("Hello world!");
-        String[] stats = loadStats();
-
-        // for testing purposes
-        for (int i = 0; i < 19; i++){
-            System.out.println(stats[i]);
-        }
+        System.out.println("Hello LBYCPEI!");
+        String[][] database = loadStats();
     }
 
-    private static String[] loadStats() {
-        // TODO:
+    /*
+     * Returns a string array containing statistics involving pokemons found in the pokemonData
+     *
+     * Usage: loadStats();
+     */
+    private static String[][] loadStats() {
+        String[][] pokemonStats = new String[1000][7]; //Pokemon stat array containing each pokemon and  their attributes
         try {
 
             // Scanner Object reads the line from the file
@@ -37,20 +37,19 @@ public class Main {
 
             // System.in reads from console while this reads from file
             Scanner text = new Scanner(fileReader);
-            String[] pokemonStats;
 
-            // Read and display the lines
+            // Add each pokemon stat in an array
+            int i = 0;
             while (text.hasNext()) {
                 String line = text.nextLine();
 
                 // Splits this string around matches of the given regular expression.
-                pokemonStats = line.split(",");
-
+                pokemonStats[i] = line.split(",");
+                i++;
             }
         } catch (FileNotFoundException e) {
             System.out.println("File does not Exist");
-        } finally {
-            return pokemonStats;
         }
+        return pokemonStats;
     }
 }
