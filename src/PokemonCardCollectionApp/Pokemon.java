@@ -1,13 +1,15 @@
-package PokemonCard;
+package PokemonCardCollectionApp;
 
 abstract class Pokemon {
     private String name;
-    private float weight;
-    private float height;
-    private float  attack;
-    private float defense;
-    private float stamina;
+    private String weight;
+    private String height;
+    private String  attack;
+    private String defense;
+    private String stamina;
     private String[] type;
+
+    public abstract boolean isMultiType();
 
     public abstract void setType(String type);
 
@@ -19,43 +21,43 @@ abstract class Pokemon {
         this.name = name;
     }
 
-    public float getWeight(){
+    public String getWeight(){
         return weight;
     }
 
-    public void setWeight(float weight){
+    public void setWeight(String weight){
         this.weight = weight;
     }
 
-    public float getHeight(){
+    public String getHeight(){
         return height;
     }
 
-    public void setHeight(float height){
+    public void setHeight(String height){
         this.height = height;
     }
 
-    public float getAttack(){
+    public String getAttack(){
         return attack;
     }
 
-    public void setAttack(float attack){
+    public void setAttack(String attack){
         this.attack = attack;
     }
 
-    public float getDefense(){
+    public String getDefense(){
         return defense;
     }
 
-    public void setDefense(float defense){
+    public void setDefense(String defense){
         this.defense = defense;
     }
 
-    public float getStamina(){
+    public String getStamina(){
         return stamina;
     }
 
-    public void setStamina(float stamina){
+    public void setStamina(String stamina){
         this.stamina = stamina;
     }
 

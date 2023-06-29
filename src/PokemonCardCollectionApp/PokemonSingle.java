@@ -1,4 +1,4 @@
-package PokemonCard;
+package PokemonCardCollectionApp;
 
 class PokemonSingle extends Pokemon{
     private String[] type = new String[1];
@@ -10,4 +10,7 @@ class PokemonSingle extends Pokemon{
         this.type[0] = type;
     }
 
+    public boolean isMultiType(){
+        return false;
+    }
 }

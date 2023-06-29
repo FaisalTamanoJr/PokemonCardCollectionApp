@@ -1,4 +1,4 @@
-package PokemonCard;
+package PokemonCardCollectionApp;
 
 class PokemonDual extends Pokemon{
     private String[] type;
@@ -8,6 +8,10 @@ class PokemonDual extends Pokemon{
     }
     public void setType(String type){
         this.type = type.split("/");
+    }
+
+    public boolean isMultiType(){
+        return true;
     }
 
 }
